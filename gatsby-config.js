@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    title: "Hodowla Bichon Frise - Petit Et Blanc FCI",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+      "Hodowla psów rasowych bichon frise (kędzierzawy). Zarejestrowana w Związku Kynologicznym w Polsce - Oddział Wałbrzych. Salon strzyżenia i pielęgnacji psów.",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -37,7 +37,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    "gatsby-plugin-sharp",
+    { resolve: 'gatsby-plugin-sharp', options: { failOnError: false } },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
