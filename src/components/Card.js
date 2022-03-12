@@ -80,16 +80,22 @@ const CardButtonStyled = styled.button`
   }
 `
 
-const Card = ({ children, img, shouldShowCard, tab, idx }) => (
+const Card = function ({ children, img, shouldShowCard, tab, idx }) {
+  console.log(img);
+  return (
   <CardContainer>
-    <CardStyled img={img} style={shouldShowCard ? {opacity: 1, transform: 'translateX(0%)'} : {opacity: 0, transform: 'translateX(5%)'}} onClick={
-      () => navigate(tab)
+    <CardStyled img={img.default} 
+                style={shouldShowCard ? {opacity: 1, transform: 'translateX(0%)'} : {opacity: 0, transform: 'translateX(5%)'}} 
+                onClick={() => {
+                  return navigate(tab);
+                }
     }>
     </CardStyled>
     <CardButtonStyled top={idx === 1 || idx === 2 ? 82 : 135} style={shouldShowCard ? {opacity: 1, transform: 'translateX(0%)'} : {opacity: 0, transform: 'translateX(5%)'}}
       dangerouslySetInnerHTML={{ __html: children }}>
     </CardButtonStyled>
   </CardContainer>
-)
+  );
+};
 
 export default Card
