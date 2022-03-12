@@ -114,7 +114,7 @@ class Lightbox extends Component {
   render() {
     const { images } = this.props;
     const { selectedImage } = this.state;
-    console.log(images[selectedImage]);
+    console.log(images[selectedImage].image);
     return (
       <div className="gallery-modal">
         <div className="gallery"

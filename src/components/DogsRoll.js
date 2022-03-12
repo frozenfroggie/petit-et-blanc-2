@@ -16,7 +16,7 @@ class DogsRoll extends React.Component {
   }
   openLightbox = (post, idx, event) => {
     event.preventDefault();
-    const photos = post.frontmatter.galleryImages.map(({image, description}) => ({image: image.childImageSharp.fluid, description}))
+    const photos = post.frontmatter.galleryImages.map(({image, description}) => ({image: image.childImageSharp.gatsbyImageData, description}))
     this.setState({ lightbox: true, photos, currentImage: idx });
   }
   closeLightbox = () =>{

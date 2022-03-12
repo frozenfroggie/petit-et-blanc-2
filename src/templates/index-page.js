@@ -517,9 +517,7 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
         heading
