@@ -154,14 +154,13 @@ const DogInfo = props => (
                 props.galleryImages && props.galleryImages.map(({image}, idx) => {
                   return (
                     <li key={idx} className="gallery-image">
-                      <div key={'dog-' + idx} className="dog" style={{
-                        backgroundImage: `url(${
-                          !!(image && image.childImageSharp)
-                            ? image.childImageSharp.gatsbyImageData
-                            : image
-                        })`
-                      }} onClick={e => props.openLightbox(idx, e)}>
-                      </div>
+                      <GatsbyImage
+                        alt="dog info"
+                        key={ `gallery-image-${idx}`}
+                        className="dog"
+                        image={image.childImageSharp.gatsbyImageData} 
+                        onClick={e => props.openLightbox(idx, e)}
+                      />
                     </li>
                   )
                 })

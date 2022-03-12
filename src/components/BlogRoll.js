@@ -4,6 +4,8 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import styled from "styled-components"
 import { FaClock, FaTags } from 'react-icons/fa';
 import { kebabCase } from 'lodash'
+import { getSrc } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import defaultDog from '../img/default_dog.png'
 
@@ -18,7 +20,7 @@ const PostTile = styled.article`
 `
 
 const PostTileImage = styled.div`
-  background-image: url(${props => !!(props.image && props.image.childImageSharp) ? props.image.childImageSharp.fluid.src : defaultDog});
+  background-image: url(${props => !!(props.image && props.image.childImageSharp) ? getSrc(props.image.childImageSharp) : defaultDog});
   width: 100%;
   height: 250px;
   background-position: center;
@@ -117,7 +119,6 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
     return (
       <div className="columns is-multiline">
         {posts &&
@@ -201,9 +202,7 @@ export default () => (
                 date(formatString: "D MMMM, YYYY", locale: "pl")
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 400, quality: 64) {
-                      ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                   }
                 }
               }
