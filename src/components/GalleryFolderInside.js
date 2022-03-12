@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Modal from './Modal.js';
 import Lightbox from './Lightbox.js';
@@ -15,14 +16,13 @@ const GalleryFolderInside = props => {
             props.galleryImages && props.galleryImages.map(({image}, idx) => {
               return (
                 <li key={idx} className="column is-4">
-                  <div className="gallery-folder-image" style={{
-                    backgroundImage: `url(${
-                      !!(image && image.childImageSharp)
-                        ? image.childImageSharp.fluid.src
-                        : image
-                    })`
-                  }} onClick={e => props.openLightbox(idx, e)}>
-                  </div>
+                  <GatsbyImage
+                    alt="dog image"
+                    key={idx}
+                    className="gallery-folder-image" 
+                    image={image.childImageSharp.gatsbyImageData} 
+                    onClick={e => props.openLightbox(idx, e)}
+                  />
                 </li>
               )
             })
@@ -31,14 +31,13 @@ const GalleryFolderInside = props => {
             props.galleryImages && props.galleryImages.map(({image}, idx) => {
               return (
                 <li key={idx} className="column is-3">
-                  <div className="gallery-image" style={{
-                    backgroundImage: `url(${
-                      !!(image && image.childImageSharp)
-                        ? image.childImageSharp.fluid.src
-                        : image
-                    })`
-                  }} onClick={e => props.openLightbox(idx, e)}>
-                  </div>
+                  <GatsbyImage 
+                    alt="dog image"
+                    key={idx}
+                    className="gallery-image" 
+                    image={image.childImageSharp.gatsbyImageData} 
+                    onClick={e => props.openLightbox(idx, e)}
+                  />
                 </li>
               )
             })

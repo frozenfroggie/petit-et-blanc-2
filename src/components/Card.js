@@ -81,7 +81,6 @@ const CardButtonStyled = styled.button`
 `
 
 const Card = function ({ children, img, shouldShowCard, tab, idx }) {
-  console.log(img);
   return (
   <CardContainer>
     <CardStyled img={img.default} 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { FaAngleRight, FaAngleLeft, FaTimesCircle } from 'react-icons/fa';
 
@@ -111,15 +112,21 @@ class Lightbox extends Component {
     })
   }
   render() {
-    const { images } = this.props
-    const { selectedImage } = this.state
+    const { images } = this.props;
+    const { selectedImage } = this.state;
+    console.log(images[selectedImage]);
     return (
       <div className="gallery-modal">
         <div className="gallery"
           onTouchStart={e => this.handleTouchStart(e)}
           onTouchMove={e => this.handleTouchMove(e)}
           onTouchEnd={e => this.handleTouchEnd(e)}>
-          <img alt="Podgląd zdjęcia" className="gallery-image" src={images[selectedImage].image.src} />
+          <GatsbyImage
+            alt="gallery preview"
+            key={ `gallery-image-${selectedImage}`}
+            className="gallery-image"
+            image={images[selectedImage].image}
+          />
           <button className="gallery-button-container gallery-button-left" onClick={this.goBack}>
             <div className="button gallery-button">
               <FaAngleLeft size="2em" />

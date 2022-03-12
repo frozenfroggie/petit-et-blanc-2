@@ -2,6 +2,7 @@ import React from 'react'
 
 import Modal from './Modal.js';
 import Lightbox from './Lightbox.js';
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import defaultDog from '../img/default_dog.png'
 
@@ -10,13 +11,12 @@ const DogNewHomeInfo = props => (
     <div className="box notification is-full">
       <div className="columns">
         <div className="column is-6" >
-          <div className="dog-info" style={{
-            backgroundImage: `url(${
-              !!(props.image && props.image.childImageSharp)
-                ? props.image.childImageSharp.fluid.src
-                : defaultDog
-            })`
-          }}></div>
+          <GatsbyImage
+            alt="dog info"
+            key={ `folder-image-${props.id}`}
+            className="dog-info"
+            image={props.image.childImageSharp.gatsbyImageData} 
+          />
           <p>
           {
             props.description
@@ -31,14 +31,13 @@ const DogNewHomeInfo = props => (
                 props.galleryImages && props.galleryImages.map(({image}, idx) => {
                   return (
                     <li key={idx} className="gallery-image">
-                      <div className="dog" style={{
-                        backgroundImage: `url(${
-                          !!(image && image.childImageSharp)
-                            ? image.childImageSharp.fluid.src
-                            : image
-                        })`
-                      }} onClick={e => props.openLightbox(idx, e)}>
-                      </div>
+                      <GatsbyImage
+                        alt="dog"
+                        key={ `folder-image-${props.id}`}
+                        className="dog"
+                        image={props.image.childImageSharp.gatsbyImageData} 
+                        onClick={e => props.openLightbox(idx, e)}
+                      />
                     </li>
                   )
                 })

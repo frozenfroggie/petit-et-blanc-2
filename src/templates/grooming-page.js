@@ -33,7 +33,7 @@ class GroomingPage extends React.Component {
   }
   openLightbox = (galleryImages, idx, event) => {
     event.preventDefault();
-    const photos = galleryImages.map(({image, description}) => ({image: image.childImageSharp.fluid, description}))
+    const photos = galleryImages.map(({image, description}) => ({image: image.childImageSharp.gatsbyImageData, description}))
     this.setState({ lightbox: true, photos, currentImage: idx });
   }
   closeLightbox = () =>{
@@ -61,9 +61,7 @@ query GroomingPageTemplate {
         galleryImages {
           image {
             childImageSharp {
-              fluid(maxWidth: 2400, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(layout: CONSTRAINED)
             }
           }
         }

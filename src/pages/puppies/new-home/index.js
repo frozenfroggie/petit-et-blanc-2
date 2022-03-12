@@ -67,18 +67,14 @@ export default props => (
               galleryImages {
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 2400, quality: 64) {
-                      ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                   }
                 }
                 description
               }
               image {
                 childImageSharp {
-                  fluid(maxWidth: 2400, quality: 64) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(layout: CONSTRAINED)
                 }
               }
             }

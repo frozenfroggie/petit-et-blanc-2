@@ -3,6 +3,7 @@ import { FaMars, FaVenus, FaPaperclip } from 'react-icons/fa';
 import classNames from 'classnames';
 import moment from 'moment';
 import 'moment/locale/pl';
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Modal from './Modal.js';
 import Lightbox from './Lightbox.js';
@@ -14,13 +15,12 @@ const DogInfo = props => (
     <div className="box notification is-full">
       <div className="columns">
         <div className="column is-6" >
-            <div className="dog-info" style={{
-              backgroundImage: `url(${
-                !!(props.image && props.image.childImageSharp)
-                  ? props.image.childImageSharp.fluid.src
-                  : defaultDog
-              })`
-            }}></div>
+            <GatsbyImage
+              alt="dog info"
+              key={ `folder-image-${props.id}`}
+              className="dog-info"
+              image={props.image.childImageSharp.gatsbyImageData} 
+            />
           <div style={{padding: '0px 10px'}}>
             {
               props.homeName ?
@@ -157,7 +157,7 @@ const DogInfo = props => (
                       <div key={'dog-' + idx} className="dog" style={{
                         backgroundImage: `url(${
                           !!(image && image.childImageSharp)
-                            ? image.childImageSharp.fluid.src
+                            ? image.childImageSharp.gatsbyImageData
                             : image
                         })`
                       }} onClick={e => props.openLightbox(idx, e)}>

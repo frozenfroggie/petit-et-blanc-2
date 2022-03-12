@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { Link } from 'gatsby'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import defaultDog from '../img/default_dog.png'
 
@@ -12,14 +13,12 @@ const DogTile = props => (
     <Link to={props.slug}>
       <article className={classNames("is-child", "dog-tile")}>
         <div className={classNames({"dog-for-sale-ribbon": props.forSale})}></div>
-        <div className={classNames("dog", {"dog-default": !(props.image && props.image.childImageSharp)})} style={{
-          backgroundImage: `url(${
-            !!(props.image && props.image.childImageSharp)
-              ? props.image.childImageSharp.fluid.src
-              : defaultDog
-          })`
-        }}>
-        </div>
+        <GatsbyImage
+              alt="dog tile"
+              key={ `folder-image-${props.id}`}
+              className={classNames("dog", {"dog-default": !(props.image && props.image.childImageSharp)})} 
+              image={props.image.childImageSharp.gatsbyImageData} 
+            />
         <div className="title is-size-5">
           <div className={classNames({"dog-for-sale": props.forSale})}></div>
           { props.officialName || props.title }
