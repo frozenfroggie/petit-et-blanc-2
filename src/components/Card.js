@@ -78,23 +78,41 @@ const CardButtonStyled = styled.button`
     display: inline-block;
     font-weight: 300;
   }
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const Card = function ({ children, img, shouldShowCard, tab, idx }) {
-  return (
-  <CardContainer>
+  if(shouldShowCard) {
+    return (
+  <CardContainer className="Card-inside"
+    onClick={e => {
+      if(shouldShowCard) {
+        return navigate(tab);
+      }
+    }}>
     <CardStyled img={img.default} 
-                style={shouldShowCard ? {opacity: 1, transform: 'translateX(0%)'} : {opacity: 0, transform: 'translateX(5%)'}} 
-                onClick={() => {
-                  return navigate(tab);
-                }
-    }>
+                style={shouldShowCard ? {opacity: 1, transform: 'translateX(0%)'} : {opacity: 0, transform: 'translateX(5%)'}} >
     </CardStyled>
-    <CardButtonStyled top={idx === 1 || idx === 2 ? 82 : 135} style={shouldShowCard ? {opacity: 1, transform: 'translateX(0%)'} : {opacity: 0, transform: 'translateX(5%)'}}
-      dangerouslySetInnerHTML={{ __html: children }}>
+    <CardButtonStyled top={idx === 1 || idx === 2 ? 82 : 135} 
+                      style={shouldShowCard ? {opacity: 1, transform: 'translateX(0%)'} : {opacity: 0, transform: 'translateX(5%)'}}
+                      dangerouslySetInnerHTML={{ __html: children }}>
     </CardButtonStyled>
   </CardContainer>
   );
+  } else {
+    return (
+      <CardContainer className="Card-inside">
+      <CardStyled img={img.default} 
+                  style={shouldShowCard ? {opacity: 1, transform: 'translateX(0%)'} : {opacity: 0, transform: 'translateX(5%)'}} >
+      </CardStyled>
+      <CardButtonStyled top={idx === 1 || idx === 2 ? 82 : 135} 
+                        style={shouldShowCard ? {opacity: 1, transform: 'translateX(0%)'} : {opacity: 0, transform: 'translateX(5%)'}}
+                        dangerouslySetInnerHTML={{ __html: children }}>
+      </CardButtonStyled>
+    </CardContainer>    )
+  }
 };
 
 export default Card
