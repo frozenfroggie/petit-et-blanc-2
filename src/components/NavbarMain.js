@@ -106,6 +106,8 @@ const NavbarMain = class extends React.Component {
         role="navigation"
         aria-label="main-navigation">
         <div className="container" >
+          <div className="redredred" style={{width: "100%", height: "200px", backgroundColor: "red"}}>
+          </div>
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
               <div className="navbar-logo" style={{overflow: 'hidden', position: 'relative'}}>

@@ -28,7 +28,7 @@ class LittersPage extends React.Component {
     console.log('ok', posts)
     return (
       <Layout>
-        <section className="section section-main" style={{zIndex: 99, position: 'relative', top: '100px', marginBottom: '-100vh'}}>
+        <section className="section section-main" style={{zIndex: 99, position: 'relative', top: '150px', marginBottom: '-100vh'}}>
           <div className="container">
             <div className="content">
               <DogsRoll

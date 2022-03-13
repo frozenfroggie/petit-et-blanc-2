@@ -38,7 +38,7 @@ class DogsIndexPage extends React.Component {
     const { edges: posts } = this.props.data.allMarkdownRemark
     return (
         <Layout>
-            <section className="section section-main" style={{zIndex: 99, position: 'relative', top: '100px', marginBottom: '-100vh'}}>
+            <section className="section section-main" style={{zIndex: 99, position: 'relative', top: '150px', marginBottom: '-100vh'}}>
               <div className="container">
                 <div className="content">
                   <Router>

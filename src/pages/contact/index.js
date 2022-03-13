@@ -57,7 +57,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section" style={{zIndex: 99, position: 'relative', top: '100px', marginBottom: '-100vh'}}>
+        <section className="section" style={{zIndex: 99, position: 'relative', top: '150px', marginBottom: '-100vh'}}>
           <div className="container container-contact">
             <div className="content columns">
               <div className="column is-6 contact">

@@ -29,7 +29,7 @@ class ExhibitionsPage extends React.Component {
     return (
         <Layout>
             <section className="section section-main it" style={{marginBottom: '-100vh'}}>
-              <div className="container" style={{zIndex: 99, position: 'relative', top: 100}}>
+              <div className="container" style={{zIndex: 99, position: 'relative', top: 150}}>
                 <div className="content">
                   <DogsRoll
                     path="/puppies/litters"

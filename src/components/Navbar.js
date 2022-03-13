@@ -4,8 +4,11 @@ import styled from "styled-components"
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { navigate } from '@reach/router';
 import classNames from 'classnames';
+import { StaticImage } from "gatsby-plugin-image";
 
 import logo_white from "../img/logo_white.png";
+import safe_animal from "../img/safe-animal-900x100.jpg";
+
 // import logo_green from "../img/logo_green.png";
 // import cut from "../img/cut.png";
 
@@ -20,6 +23,21 @@ const NavStyled = styled.nav`
   font-size: 1.1em;
   transition: all .4s;
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
+`
+
+const BanerContainerGradient = styled.div`
+  width: 100%;
+  height: 100px;
+`
+
+const BanerContainer = styled.div`
+  width: 100%;
+  height: 100px;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(${safe_animal});
+  background-color: black;
 `
 
 const NavContainer = styled.div`
@@ -250,9 +268,17 @@ const Navbar = class extends React.Component {
             </div>
           </div>
         </NavContainer>
+        <BanerContainerGradient>
+          <BanerContainer>
+          </BanerContainer>
+        </BanerContainerGradient>
       </NavStyled>
     );
   }
 };
 
 export default Navbar;
+
+
+{/* <StaticImage src="../img/safe-animal-900x100.jpg" alt="Safe animal" style={{width: "auto", objectPosition: "center"}}/> */}
+
