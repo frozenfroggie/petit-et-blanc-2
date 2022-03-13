@@ -153,10 +153,11 @@ const DogInfo = props => (
               {
                 props.galleryImages && props.galleryImages.map(({image}, idx) => {
                   return (
-                    <li key={idx} className="gallery-image">
+                    <li 
+                      key={ `gallery-image-${idx}`}
+                      className="gallery-image">
                       <GatsbyImage
                         alt="dog info"
-                        key={ `gallery-image-${idx}`}
                         className="dog"
                         image={image.childImageSharp.gatsbyImageData} 
                         onClick={e => props.openLightbox(idx, e)}

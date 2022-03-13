@@ -26,9 +26,10 @@ class DogsRoll extends React.Component {
     const { gender, showDog, dogToShow } = this.props
     let forSale;
     const filteredPosts = this.props.posts.filter(({node}) => node.frontmatter.gender === gender)
-    // if(dogToShow) {
-    //   post = filteredPosts[dogToShow - 1].node;
-    // }
+    if(dogToShow) {
+      const post = filteredPosts[dogToShow - 1].node;
+      console.log(post)
+    }
     return (
       <div>
         <div className="dogs-container columns is-multiline">
@@ -36,7 +37,7 @@ class DogsRoll extends React.Component {
             filteredPosts.length > 0 && (filteredPosts
               .map(({ node: post }, idx) => (
                 <DogTile
-                  key={idx}
+                  key={ `dog-tile-${post.id}`}
                   idx={idx}
                   id={post.id}
                   slug={post.fields.slug}

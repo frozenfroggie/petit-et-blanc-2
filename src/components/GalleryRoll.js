@@ -16,6 +16,7 @@ class GalleryRoll extends React.Component {
               posts.length > 0 ? (posts
                 .map(({ node: post }, idx) => (
                   <GalleryFolder
+                    key={ `gallery-folder-${post.id}`}
                     openFolder={() => this.props.openFolder(idx + 1)}
                     title={post.frontmatter.title}
                     galleryImages={post.frontmatter.galleryImages}

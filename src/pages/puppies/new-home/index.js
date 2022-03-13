@@ -32,7 +32,7 @@ class NewHome extends React.Component {
             <div className="content">
               <DogsRoll
                 posts={posts}
-                path="/puppies/litters"
+                path="/puppies/new-home"
                 location={this.props.location}
                 goBack={this.goBack}
                 dogToShow={this.state.tileToShow}

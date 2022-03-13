@@ -26,15 +26,17 @@ const GalleryFolderInside = props => {
   return (
   <div
     className="is-parent column is-12"
-    key={props.id}>
+    key={ `gallery-folder-list-${props.id}`}>
         <ul className="columns is-multiline gallery-folder-list">
           {
             props.galleryImages && props.galleryImages.map(({image}, idx) => {
               return (
-                <li key={idx} className="column is-4">
+                <li 
+                  key={ `gallery-image-list-${props.id}`}
+                  className="column is-4">
                   <GatsbyImage
                     alt="dog image"
-                    key={idx}
+                    key={ `gallery-image-${props.id}`}
                     className="gallery-folder-image" 
                     image={image.childImageSharp.gatsbyImageData} 
                     onClick={e => props.openLightbox(idx, e)}
