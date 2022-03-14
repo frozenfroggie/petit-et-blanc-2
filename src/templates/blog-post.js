@@ -27,7 +27,7 @@ export const BlogPostTemplate = ({
   return (
     <section className="section" style={{marginBottom: '-100vh'}}>
       {helmet || ''}
-      <div className="container content" style={{zIndex: 99, marginTop: 100}}>
+      <div className="container content" style={{zIndex: 99, marginTop: 150}}>
         <div className="columns">
           <div className="column is-9">
             <PostStyled>

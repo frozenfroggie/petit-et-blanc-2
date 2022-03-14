@@ -268,10 +268,12 @@ const Navbar = class extends React.Component {
             </div>
           </div>
         </NavContainer>
-        <BanerContainerGradient>
-          <BanerContainer>
-          </BanerContainer>
-        </BanerContainerGradient>
+        <a target="_blank" href="https://www.safe-animal.eu">
+          <BanerContainerGradient>         
+            <BanerContainer>
+            </BanerContainer>
+          </BanerContainerGradient>
+        </a>
       </NavStyled>
     );
   }

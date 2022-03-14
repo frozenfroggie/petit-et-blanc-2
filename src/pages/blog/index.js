@@ -9,7 +9,7 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <section className="section" style={{marginBottom: '-100vh'}}>
-          <div className="container" style={{zIndex: 99, position: 'relative', top: 100}}>
+          <div className="container" style={{zIndex: 99, position: 'relative', top: 150}}>
             <div className="content">
               <div className="columns">
                 <div className="column is-9">
