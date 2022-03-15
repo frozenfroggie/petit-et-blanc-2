@@ -2,8 +2,13 @@ import CMS from 'netlify-cms-app'
 // import uploadcare from 'netlify-cms-media-library-uploadcare'
 // import cloudinary from 'netlify-cms-media-library-cloudinary'
 
-CMS.init()
-
+CMS.init({
+    config: {
+      backend: {
+        name: "git-gateway",
+      },
+    },
+  })
 // import CMS from 'netlify-cms'
 //
 // import AboutPagePreview from './preview-templates/AboutPagePreview'

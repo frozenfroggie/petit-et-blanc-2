@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Hodowla Bichon Frise - Petit Et Blanc FCI",
+    siteUrl: "https://compassionate-edison-6eac25.netlify.app/",
     description:
       "Hodowla psów rasowych bichon frise (kędzierzawy). Zarejestrowana w Związku Kynologicznym w Polsce - Oddział Wałbrzych. Salon strzyżenia i pielęgnacji psów.",
   },
@@ -67,8 +68,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
+        manualInit: true,
         modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+      }
     },
     {
       resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
@@ -76,7 +78,6 @@ module.exports = {
         develop: true, // Activates purging in npm run develop
         purgeOnly: ["/all.sass"], // applies purging only on the bulma css file
       },
-    }, // must be after other CSS plugins
-    "gatsby-plugin-netlify", // make sure to keep it last in the array
+    }
   ],
 };
