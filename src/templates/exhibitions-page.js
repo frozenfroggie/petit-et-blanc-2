@@ -35,7 +35,7 @@ export const ExhibitionsPageTemplate = ({
   return (
     <div>
     <section className="section section--gradient" style={{marginBottom: '-100vh'}}>
-      <div className="container" style={{zIndex: 99, marginTop: 100}}>
+      <div className="container" style={{zIndex: 99, marginTop: 160}}>
         <div className="section">
           <div className="columns">
             <div className="column is-12">
