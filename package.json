@@ -8,6 +8,7 @@
     "classnames": "^2.3.1",
     "gatsby": "^4.6.2",
     "gatsby-plugin-image": "^2.9.1",
+    "gatsby-plugin-netlify": "^4.1.0",
     "gatsby-plugin-netlify-cms": "^6.9.0",
     "gatsby-plugin-purgecss": "^6.1.1",
     "gatsby-plugin-react-helmet": "^5.9.0",
