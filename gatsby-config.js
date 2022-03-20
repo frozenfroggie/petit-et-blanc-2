@@ -66,6 +66,21 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Petit Et Blanc",
+        short_name: "Petit Et Blanc",
+        description: "Petit Et Blanc",
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        lang: "en",
+        start_url: "/",
+        include_favicon: true,
+        icon: "static/img/favicon-16x16.png",
+      },
+    },
+    {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
