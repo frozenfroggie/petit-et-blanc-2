@@ -17,7 +17,7 @@ const DogTile = props => (
               alt="dog tile"
               key={ `folder-image-${props.id}`}
               className={classNames("dog", {"dog-default": !(props.image && props.image.childImageSharp)})} 
-              image={props.image.childImageSharp.gatsbyImageData} 
+              image={props.image && props.image.childImageSharp && props.image.childImageSharp.gatsbyImageData} 
             />
         <div className="title is-size-5">
           <div className={classNames({"dog-for-sale": props.forSale})}></div>

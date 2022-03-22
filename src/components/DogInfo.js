@@ -19,7 +19,7 @@ const DogInfo = props => (
               alt="dog info"
               key={ `folder-image-${props.id}`}
               className="dog-info"
-              image={props.image.childImageSharp.gatsbyImageData} 
+              image={props.image && props.image.childImageSharp && props.image.childImageSharp.gatsbyImageData} 
             />
           <div style={{padding: '0px 10px'}}>
             {
@@ -159,7 +159,7 @@ const DogInfo = props => (
                       <GatsbyImage
                         alt="dog info"
                         className="dog"
-                        image={image.childImageSharp.gatsbyImageData} 
+                        image={image.childImageSharp && image.childImageSharp.gatsbyImageData} 
                         onClick={e => props.openLightbox(idx, e)}
                       />
                     </li>
