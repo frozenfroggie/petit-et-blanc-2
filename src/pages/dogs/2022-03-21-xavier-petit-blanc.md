@@ -6,7 +6,7 @@ officialName: XAVIER Petit&Blanc
 lineage: https://drive.google.com/file/d/11u8MW7LPG9I3IM1o_FGEt-OLdcifnBvQ/view?usp=sharing
 homeName: Pączek
 gender: male
-birthDate: ""
+birthDate: 2019-08-09T22:00:00.000Z
 achievements:
   - Champion Polski
   - oczy czyste
