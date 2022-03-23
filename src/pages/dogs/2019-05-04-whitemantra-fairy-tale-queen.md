@@ -13,6 +13,10 @@ achievements:
   - Młodzieżowy Champion Polski
 galleryImages:
   - description: ""
+    image: /img/fuksy7.jpg
+  - description: ""
+    image: /img/fuksy6.jpg
+  - description: ""
     image: /img/fuksi.jpg
   - image: /img/fuksi1.jpg
   - image: /img/fuksi2.jpg
@@ -21,8 +25,4 @@ galleryImages:
   - image: /img/fuksi5.jpg
   - image: /img/fuksi6.jpg
   - image: /img/fuksi7.jpg
-  - description: ""
-    image: /img/fuksy6.jpg
-  - description: ""
-    image: /img/fuksy7.jpg
 ---
