@@ -3,12 +3,12 @@ templateKey: dogs-page
 date: 2022-03-21T09:36:03.529Z
 image: /img/paczek2.jpg
 officialName: XAVIER Petit&Blanc
-lineage: https://www.facebook.com/magdalena.pilszak.3
+lineage: https://drive.google.com/file/d/11u8MW7LPG9I3IM1o_FGEt-OLdcifnBvQ/view?usp=sharing
 homeName: Pączek
 gender: male
 birthDate: ""
 achievements:
-  - Champion
+  - Champion Polski; oczy czyste; rzepki 0/0
 galleryImages:
   - description: ""
     image: /img/brodnica2022.jpg
@@ -18,6 +18,8 @@ galleryImages:
     image: /img/paczek1.jpg
   - description: ""
     image: /img/paczek3.jpg
+  - description: ""
+    image: /img/paczek5.jpg
 description: |-
   Pieszczoch wszechczasów <3
   Synek Rasmusa (Petit Ami's Higher Ground) oraz Lily (Claudia Tango Amore).
