@@ -9,8 +9,6 @@ gender: male
 birthDate: 2019-08-09T22:00:00.000Z
 achievements:
   - Champion Polski
-  - oczy czyste
-  - rzepki 0/0
 galleryImages:
   - description: ""
     image: /img/brodnica2022.jpg
@@ -25,4 +23,5 @@ galleryImages:
 description: |-
   Pieszczoch wszechczasów <3
   Synek Rasmusa (Petit Ami's Higher Ground) oraz Lily (Claudia Tango Amore).
+  Oczy czyste, rzepki 0/0
 ---
