@@ -8,7 +8,9 @@ homeName: Pączek
 gender: male
 birthDate: ""
 achievements:
-  - Champion Polski; oczy czyste; rzepki 0/0
+  - Champion Polski
+  - oczy czyste
+  - rzepki 0/0
 galleryImages:
   - description: ""
     image: /img/brodnica2022.jpg
